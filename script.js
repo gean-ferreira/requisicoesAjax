@@ -24,3 +24,11 @@ function reqPromisse() {
 			p.innerHTML = JSON.stringify(dados);
 		})
 }
+
+// Requisição com Async/Await
+async function reqAsyncAwait() {
+	const response = await fetch(`${API_URL}${USERNAME}`);
+	const dados = await response.json();
+	const p = document.getElementById("ReqAsyncAwait");
+	p.innerHTML = JSON.stringify(dados);
+}
